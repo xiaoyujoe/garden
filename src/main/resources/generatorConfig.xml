@@ -6,23 +6,57 @@
 			connectionURL="jdbc:mysql://localhost:3306/qile"
 			driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
 		<javaModelGenerator
-			targetPackage="qile.garden.field.entity" targetProject="garden">
+			targetPackage="qile.garden.entity" targetProject="garden">
 			<property name="enableSubPackages" value="false" />
 		</javaModelGenerator>
-		<sqlMapGenerator
-			targetPackage="qile.garden.field.mapper" targetProject="garden">
+		<sqlMapGenerator targetPackage="qile.garden.mapper"
+			targetProject="garden">
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 		<javaClientGenerator
-			targetPackage="qile.garden.field.mapper" targetProject="garden"
+			targetPackage="qile.garden.dao" targetProject="garden"
 			type="XMLMAPPER">
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
-		<table tableName="user"></table>
-		<table tableName="field"></table>
-		<table tableName="fresh"></table>
-		<table tableName="garden"></table>
-		<table tableName="grower"></table>
-		<table tableName="member"></table>
+		<table tableName="user" domainObjectName="User"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="field" domainObjectName="Field"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+		<table tableName="fresh" domainObjectName="Fresh"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+		<table tableName="garden" domainObjectName="Garden"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+		<table tableName="grower" domainObjectName="Grower"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+		<table tableName="member" domainObjectName="Member"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
 	</context>
 </generatorConfiguration>
