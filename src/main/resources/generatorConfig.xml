@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="context1">
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost:3306/qile"
+			driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
+		<javaModelGenerator
+			targetPackage="qile.garden.field.entity" targetProject="garden">
+			<property name="enableSubPackages" value="false" />
+		</javaModelGenerator>
+		<sqlMapGenerator
+			targetPackage="qile.garden.field.mapper" targetProject="garden">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<javaClientGenerator
+			targetPackage="qile.garden.field.mapper" targetProject="garden"
+			type="XMLMAPPER">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		<table tableName="user"></table>
+		<table tableName="field"></table>
+		<table tableName="fresh"></table>
+		<table tableName="garden"></table>
+		<table tableName="grower"></table>
+		<table tableName="member"></table>
+	</context>
+</generatorConfiguration>
